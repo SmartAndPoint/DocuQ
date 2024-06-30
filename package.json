@@ -1,6 +1,6 @@
 {
   "name": "docuq",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -9,7 +9,6 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
   "devDependencies": {
     "@eslint/js": "^9.5.0",
     "clean-webpack-plugin": "^4.0.0",

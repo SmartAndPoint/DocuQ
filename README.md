@@ -43,6 +43,7 @@ Customize the look and feel of DocuQ to match your brand. With custom CSS suppor
 npm install docuq
 ```
 
+
 ### Via CDN
 
 ```html
@@ -50,6 +51,12 @@ npm install docuq
 ```
 
 ## Usage
+
+```javascript
+// In your project's entry file
+import { initializeDocuQ } from 'docuq';
+document.addEventListener('DOMContentLoaded', initializeDocuQ);
+```
 
 ## Roadmap
 
