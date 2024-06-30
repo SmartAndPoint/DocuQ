@@ -4,10 +4,10 @@ DocuQ is a OpenSource chat that redefines the way users interact with your site 
 
 ## Why Choose DocuQ?
 
-    • Unparalleled User Experience: DocuQ’s sleek and intuitive interface makes navigating your documentation a breeze, enhancing user engagement and satisfaction.
-    • Instant Code Snippets: Users can generate and copy code snippets directly from your documentation, reducing development time and increasing productivity.
-    • Dynamic Search Capabilities: With an intelligent search popup, DocuQ allows users to find relevant information in seconds, minimizing frustration and maximizing efficiency.
-    • Customizable and Flexible: Easily tailor the appearance and functionality of DocuQ to align with your brand and meet your specific needs.
+- Unparalleled User Experience: DocuQ’s sleek and intuitive interface makes navigating your documentation a breeze, enhancing user engagement and satisfaction.
+- Instant Code Snippets: Users can generate and copy code snippets directly from your documentation, reducing development time and increasing productivity.
+- Dynamic Search Capabilities: With an intelligent search popup, DocuQ allows users to find relevant information in seconds, minimizing frustration and maximizing efficiency.
+- Customizable and Flexible: Easily tailor the appearance and functionality of DocuQ to align with your brand and meet your specific needs.
 
 Transform Your Documentation Today!
 
