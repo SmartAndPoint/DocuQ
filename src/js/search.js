@@ -9,13 +9,13 @@ function getPageContent() {
     return content.replace(/\s+/g, ' ').trim();
 }
 
-async function searchDocuQ(query) {
+async function searchDocuQ(query, docuqUrl) {
     if (!query.trim()) return;
 
     try {
         console.log("Initiating search with query:", query);
         const pageContent = getPageContent();
-        const response = await fetch('http://localhost:8001/smart-search', {
+        const response = await fetch(docuqUrl, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

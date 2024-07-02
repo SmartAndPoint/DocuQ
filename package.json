@@ -1,6 +1,6 @@
 {
   "name": "docuq",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -8,7 +8,7 @@
     "build-prod": "webpack --mode production"
   },
   "keywords": [],
-  "license": "SEE LICENSE IN LICENSE",
+  "license": "SEE LICENSE IN <LICENSE>",
   "author": "Evgenii Konev. <ekonev@smartandpoint.com> (https://smartandpoint.com)",
   "devDependencies": {
     "@eslint/js": "^9.5.0",

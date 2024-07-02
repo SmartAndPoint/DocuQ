@@ -43,11 +43,17 @@ Customize the look and feel of DocuQ to match your brand. With custom CSS suppor
 npm install docuq
 ```
 
-
 ### Via CDN
 
 ```html
 <script src="https://cdn.jsdelivr.net/gh/SmartAndPoint/DocuQ/dist/docuq.js"></script>
+<script>
+    window.addEventListener('load', function() {
+    const docuqUrl = 'http://api.docuq.io/search';
+    window.initializeDocuQ(docuqUrl);
+    })
+</script>
+
 ```
 
 ## Usage
@@ -55,11 +61,11 @@ npm install docuq
 ```javascript
 // In your project's entry file
 import { initializeDocuQ } from 'docuq';
-document.addEventListener('DOMContentLoaded', initializeDocuQ);
+const docuqUrl = 'http://api.docuq.io/search';
+document.addEventListener('DOMContentLoaded', initializeDocuQ(docuqUrl));
 ```
 
 ## Roadmap
 
 ## License
 ![GitHub](https://img.shields.io/github/license/SmartAndPoint/DocuQ)
-
