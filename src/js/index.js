@@ -1,11 +1,15 @@
 import '../assets/styles.css';
+import {docuqUrlDefault} from './config'
 import {setThemeBasedOnSystemPreference} from './theme';
 import {showSearchPopup, hidePopup} from './popup';
 
-document.addEventListener('DOMContentLoaded', () => {
+
+export function initializeDocuQ(docuqUrl) {
+    // Set theme based on system preference
     setThemeBasedOnSystemPreference();
     window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', setThemeBasedOnSystemPreference);
 
+    // Create and style the search button
     const searchButton = document.createElement('button');
     searchButton.textContent = 'DocuQ Search';
     searchButton.style.cssText = `
@@ -24,12 +28,19 @@ document.addEventListener('DOMContentLoaded', () => {
     searchButton.onclick = showSearchPopup;
     document.body.appendChild(searchButton);
 
+    // Add keyboard shortcuts
     document.addEventListener('keydown', (event) => {
         if (event.metaKey && event.key === '7') {
             event.preventDefault();
-            showSearchPopup();
+            showSearchPopup(docuqUrl);
         } else if (event.key === 'Escape') {
             hidePopup();
         }
     });
-});
+}
+
+// Automatically initialize DocuQ if running in the browser environment
+if (typeof window !== 'undefined') {
+    window.initializeDocuQ = initializeDocuQ;
+    document.addEventListener('DOMContentLoaded', initializeDocuQ(docuqUrlDefault));
+}

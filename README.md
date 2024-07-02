@@ -47,12 +47,25 @@ npm install docuq
 
 ```html
 <script src="https://cdn.jsdelivr.net/gh/SmartAndPoint/DocuQ/dist/docuq.js"></script>
+<script>
+    window.addEventListener('load', function() {
+    const docuqUrl = 'http://api.docuq.io/search';
+    window.initializeDocuQ(docuqUrl);
+    })
+</script>
+
 ```
 
 ## Usage
+
+```javascript
+// In your project's entry file
+import { initializeDocuQ } from 'docuq';
+const docuqUrl = 'http://api.docuq.io/search';
+document.addEventListener('DOMContentLoaded', initializeDocuQ(docuqUrl));
+```
 
 ## Roadmap
 
 ## License
 ![GitHub](https://img.shields.io/github/license/SmartAndPoint/DocuQ)
-

@@ -2,7 +2,7 @@ import { searchDocuQ } from './search';
 
 let currentPopup = null;
 
-function showSearchPopup() {
+function showSearchPopup(docuqUrl) {
     if (currentPopup) {
         document.body.removeChild(currentPopup);
     }
@@ -55,7 +55,7 @@ function showSearchPopup() {
         cursor: pointer;
         margin-left: 10px;
     `;
-    button.onclick = () => searchDocuQ(input.value);
+    button.onclick = () => searchDocuQ(input.value, docuqUrl);
 
     const resultsContainer = document.createElement('div');
     resultsContainer.id = 'docuq-search-results-container';
@@ -110,7 +110,7 @@ function showSearchPopup() {
     input.addEventListener('keydown', function(event) {
         if (event.key === 'Enter') {
             const query = input.value;
-            searchDocuQ(query);
+            searchDocuQ(query, docuqUrl);
         }
     });
 
