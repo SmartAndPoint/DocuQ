@@ -1,6 +1,5 @@
 # DocuQ UI widget
 
-
 DocuQ is a OpenSource chat that redefines the way users interact with your site documentation. By transforming your project documentation into an interactive and user-friendly knowledge base, DocuQ empowers users to quickly find the information they need and write their code efficiently.
 
 ## Why Choose DocuQ?

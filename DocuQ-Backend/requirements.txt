@@ -1,0 +1,14 @@
+bentoml
+fastapi
+pydantic
+numpy
+ollama
+#
+anthropic
+pinecone-client
+langchain-pinecone
+langchain-openai
+langchain-text-splitters
+langchain
+groq
+jinja2

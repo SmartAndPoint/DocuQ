@@ -68,4 +68,5 @@ document.addEventListener('DOMContentLoaded', initializeDocuQ(docuqUrl));
 ## Roadmap
 
 ## License
+
 ![GitHub](https://img.shields.io/github/license/SmartAndPoint/DocuQ)
