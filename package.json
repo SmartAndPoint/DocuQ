@@ -1,7 +1,7 @@
 {
-  "name": "docuq",
-  "version": "0.3.1",
-  "description": "",
+  "name": "@smartandpoint/docuq",
+  "version": "0.3.3",
+  "description": "## License on DocuQ UI widget",
   "main": "index.js",
   "scripts": {
     "build-dev": "webpack --mode development",
@@ -24,10 +24,19 @@
     "webpack-dev-server": "^5.0.4"
   },
   "dependencies": {
+    "@smartandpoint/docuq": "^0.3.3",
     "babel-loader": "^9.1.3",
+    "css-loader": "^7.1.2",
     "dompurify": "^3.1.5",
-    "marked": "^13.0.1",
     "highlight.js": "^11.9.0",
-    "css-loader": "^7.1.2"
-  }
+    "marked": "^13.0.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SmartAndPoint/DocuQ.git"
+  },
+  "bugs": {
+    "url": "https://github.com/SmartAndPoint/DocuQ/issues"
+  },
+  "homepage": "https://github.com/SmartAndPoint/DocuQ#readme"
 }

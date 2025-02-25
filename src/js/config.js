@@ -1,3 +1,3 @@
-const docuqUrlDefault = 'https://api.docuq.com/search';
+const docuqUrlDefault = 'https://api.docuq.io/search';
 
-export {docuqUrlDefault};
+export { docuqUrlDefault };

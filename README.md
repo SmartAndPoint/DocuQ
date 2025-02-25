@@ -35,37 +35,53 @@ DocuQ supports integration with both open-source and proprietary projects. It us
 
 Customize the look and feel of DocuQ to match your brand. With custom CSS support, you can tweak every aspect of the search popup and syntax highlighting to fit your needs.
 
-## Installation
+## DocuQ UI widget
 
-### Via NPM Package
+### Installation
 
 ```bash
-npm install docuq
+npm install @smartandpoint/docuq@0.3.3
 ```
 
-### Via CDN
+### Usage
+
+#### Via CDN
 
 ```html
-<script src="https://cdn.jsdelivr.net/gh/SmartAndPoint/DocuQ/dist/docuq.js"></script>
-<script>
-    window.addEventListener('load', function() {
-    const docuqUrl = 'http://api.docuq.io/search';
-    window.initializeDocuQ(docuqUrl);
-    })
-</script>
-
+<script src="https://cdn.jsdelivr.net/npm/@smartandpoint/docuq@0.3.3/dist/docuq.js"></script>
 ```
 
-## Usage
+#### Via NPM Package
 
 ```javascript
 // In your project's entry file
-import { initializeDocuQ } from 'docuq';
-const docuqUrl = 'http://api.docuq.io/search';
-document.addEventListener('DOMContentLoaded', initializeDocuQ(docuqUrl));
+import { initializeDocuQ } from '@smartandpoint/docuq@0.3.3';
+```
+
+## DocuQ Server
+
+### Installation
+
+#### Install on your server
+
+```bash
+curl -sSL https://docuq.io/instal.sh | sh
+```
+
+#### Docker
+
+```bash
+docker run -d --name docuq-server -p 8001:8001 -v $(pwd)/docuq:/app/docuq smartandpoint/docuq-server:latest
+```
+
+### Usage
+
+```bash
+docuq
 ```
 
 ## Roadmap
 
 ## License
+
 ![GitHub](https://img.shields.io/github/license/SmartAndPoint/DocuQ)
