@@ -1,21 +1,15 @@
-# UI
+.PHONY: check-npm
+check-npm:
+	@which npm > /dev/null || { echo 'npm is not installed. Check https://nodejs.org/en/download/package-manager for installation instructions' ; exit 1; }
 
-.PHONY: ui-init
-ui-init:
-	cd DocuQ-UI && npm install
+.PHONY: init
+init: check-npm
+	npm install
 
-.PHONY: ui-build
-ui-build: ui-init
-	cd DocuQ-UI && npm run build-prod
+.PHONY: build
+build: init
+	npm run build-prod
 
-.PHONY: ui-publish
-ui-publish: ui-build
-	cd DocuQ-UI && npm publish --access public
-
-
-# Backend
-
-.PHONY: backend-build
-backend-build:
-	cd DocuQ-Backend && docker build -t docuq-server .
-
+.PHONY: publish
+publish: build
+	npm publish --access public

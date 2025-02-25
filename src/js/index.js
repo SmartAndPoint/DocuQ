@@ -1,7 +1,7 @@
 import '../assets/styles.css';
-import {docuqUrlDefault} from './config'
-import {setThemeBasedOnSystemPreference} from './theme';
-import {showSearchPopup, hidePopup} from './popup';
+import { docuqUrlDefault } from './config';
+import { hidePopup, showSearchPopup } from './popup';
+import { setThemeBasedOnSystemPreference } from './theme';
 
 
 export function initializeDocuQ(docuqUrl) {

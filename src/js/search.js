@@ -1,6 +1,6 @@
-import {marked} from 'marked';
 import DOMPurify from 'dompurify';
-import {initializeHighlighting} from './utils';
+import { marked } from 'marked';
+import { initializeHighlighting } from './utils';
 
 let currentResults = '';
 
@@ -10,18 +10,25 @@ function getPageContent() {
 }
 
 async function searchDocuQ(query, docuqUrl) {
-    if (!query.trim()) return;
+    if (query instanceof Event) {
+        return;
+    }
+
+    query = String(query).trim();
+
+    if (!query) return;
 
     try {
         console.log("Initiating search with query:", query);
         const pageContent = getPageContent();
+        console.log("DocuQ URL:", docuqUrl);
         const response = await fetch(docuqUrl, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
                 'Origin': window.location.origin
             },
-            body: JSON.stringify({query: query, content: pageContent}),
+            body: JSON.stringify({ query: query, content: pageContent }),
         });
 
         console.log("Received response:", response);
@@ -37,7 +44,7 @@ async function searchDocuQ(query, docuqUrl) {
         resultsTitleDiv.style.display = 'block';
 
         while (true) {
-            const {value, done} = await reader.read();
+            const { value, done } = await reader.read();
             if (done) break;
             const decodedValue = decoder.decode(value);
             console.log("Appending decoded value:", decodedValue);
@@ -57,4 +64,4 @@ async function searchDocuQ(query, docuqUrl) {
     return `Response for query: ${query}`;
 }
 
-export {searchDocuQ};
+export { searchDocuQ };
