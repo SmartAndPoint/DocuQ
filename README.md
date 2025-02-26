@@ -58,17 +58,23 @@ npm install @smartandpoint/docuq@0.3.3
 import { initializeDocuQ } from '@smartandpoint/docuq@0.3.3';
 ```
 
-## DocuQ Server
 
-### Installation
+## Roadmap
 
-#### Install on your server
+## License
+
+![GitHub](https://img.shields.io/github/license/SmartAndPoint/DocuQ)
+
+
+## Use DocuQ with own backend server
+
+### Install on your server
 
 ```bash
 curl -sSL https://docuq.io/instal.sh | sh
 ```
 
-#### Docker
+### Install via Docker
 
 ```bash
 docker run -d --name docuq-server -p 8001:8001 -v $(pwd)/docuq:/app/docuq smartandpoint/docuq-server:latest
@@ -79,9 +85,3 @@ docker run -d --name docuq-server -p 8001:8001 -v $(pwd)/docuq:/app/docuq smarta
 ```bash
 docuq
 ```
-
-## Roadmap
-
-## License
-
-![GitHub](https://img.shields.io/github/license/SmartAndPoint/DocuQ)
