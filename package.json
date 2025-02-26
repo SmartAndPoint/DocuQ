@@ -1,6 +1,6 @@
 {
   "name": "@smartandpoint/docuq",
-  "version": "0.3.3",
+  "version": "0.3.4",
   "description": "## License on DocuQ UI widget",
   "main": "index.js",
   "scripts": {
