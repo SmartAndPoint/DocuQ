@@ -21,6 +21,7 @@ async function searchDocuQ(query, docuqUrl) {
     try {
         console.log("Initiating search with query:", query);
         const pageContent = getPageContent();
+        const docuqUrl = 'http://0.0.0.0:13000/generate';
         console.log("DocuQ URL:", docuqUrl);
         const response = await fetch(docuqUrl, {
             method: 'POST',
@@ -28,7 +29,7 @@ async function searchDocuQ(query, docuqUrl) {
                 'Content-Type': 'application/json',
                 'Origin': window.location.origin
             },
-            body: JSON.stringify({ query: query, content: pageContent }),
+            body: JSON.stringify({ query: query, content: pageContent, history: [] }),
         });
 
         console.log("Received response:", response);
